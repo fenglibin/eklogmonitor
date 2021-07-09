@@ -55,7 +55,7 @@ app:
     kibana-query-index-url: http://192.168.12.29:5601/api/saved_objects/_find?type=index-pattern&per_page=500
     # 根据部门配置需要额外接收电话告警的用户，Key为部门的ID，value的电话，多个电话以英文的逗号分隔
     phoneAlertExtraUsers:
-      1 : 13265554108,15338887312,13377536971
+      1 : 13255555555,13266666666,13277777777
 
 logging:
   config: classpath:log4j2.xml
