@@ -1,0 +1,661 @@
+[
+  {
+    "index": 0,
+    "name": "应用异常监控报表相关的接口",
+    "desc": "应用异常监控报表相关的接口",
+    "add_time": 1611213568,
+    "up_time": 1611213749,
+    "list": [
+      {
+        "query_path": {
+          "path": "/app/monitor/report/reportByApp",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37449,
+        "req_body_type": "json",
+        "res_body_type": "raw",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"deptId\":{\"type\":\"integer\",\"description\":\"归属项目部的ID\"},\"appOwner\":{\"type\":\"string\",\"description\":\"应用负责人\"},\"appId\":{\"type\":\"integer\",\"description\":\"应用的ID\"},\"startDate\":{\"type\":\"string\",\"description\":\"开始日期\"},\"endDate\":{\"type\":\"string\",\"description\":\"结束日期\"},\"status\":{\"type\":\"integer\",\"description\":\"状态：0表示未完成，1表示完成\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "按应用维度统计",
+        "path": "/app/monitor/report/reportByApp",
+        "catid": 6184,
+        "markdown": "按应用维度统计",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "600aa034c46cf75ceea4128e",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\n\"msg\": \"成功\",\n\"result\": 1,\n\"data\": {\n\"雷神项目部\": [\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"appId\": \"18\",\n\"appName\": \"ld-erp-hr线上应用异常监控\",\n\"createDate\": \"2021-01-10\",\n\"times\": 4,\n\"total\": 21\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"appId\": \"18\",\n\"appName\": \"ld-erp-hr线上应用异常监控\",\n\"createDate\": \"2021-01-09\",\n\"times\": 3,\n\"total\": 18\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"appId\": \"14\",\n\"appName\": \"erp-gateway线上应用异常监控\",\n\"createDate\": \"2021-01-08\",\n\"times\": 2,\n\"total\": 30\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"appId\": \"16\",\n\"appName\": \"erp-message-push线上应用异常监控\",\n\"createDate\": \"2021-01-08\",\n\"times\": 1,\n\"total\": 3\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"appId\": \"18\",\n\"appName\": \"ld-erp-hr线上应用异常监控\",\n\"createDate\": \"2021-01-08\",\n\"times\": 4,\n\"total\": 28\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"appId\": \"44\",\n\"appName\": \"erp-user线上应用异常监控\",\n\"createDate\": \"2021-01-08\",\n\"times\": 1,\n\"total\": 10\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"appId\": \"18\",\n\"appName\": \"ld-erp-hr线上应用异常监控\",\n\"createDate\": \"2021-01-07\",\n\"times\": 4,\n\"total\": 21\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"appId\": \"18\",\n\"appName\": \"ld-erp-hr线上应用异常监控\",\n\"createDate\": \"2021-01-06\",\n\"times\": 1,\n\"total\": 7\n}\n]\n}\n}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p>按应用维度统计</p>\n",
+        "project_id": 695,
+        "req_params": [],
+        "uid": 403,
+        "add_time": 1611213568,
+        "up_time": 1611309108,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/report/reportByOwner",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37448,
+        "req_body_type": "json",
+        "res_body_type": "raw",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"deptId\":{\"type\":\"integer\",\"description\":\"归属项目部的ID\"},\"appOwner\":{\"type\":\"string\",\"description\":\"应用负责人\"},\"startDate\":{\"type\":\"string\",\"description\":\"开始日期，格式yyyy-MM-dd\"},\"endDate\":{\"type\":\"string\",\"description\":\"结束日期，格式yyyy-MM-dd\"},\"status\":{\"type\":\"integer\",\"description\":\"状态：0表示未完成，1表示完成\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "按应用负责人维度统计",
+        "path": "/app/monitor/report/reportByOwner",
+        "catid": 6184,
+        "markdown": "按应用负责人维度统计",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "600aa01dc46cf75ceea4128d",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\n\"msg\": \"成功\",\n\"result\": 1,\n\"data\": {\n\"雷神项目部\": [\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"createDate\": \"2021-01-10\",\n\"times\": 4,\n\"total\": 21\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"createDate\": \"2021-01-09\",\n\"times\": 3,\n\"total\": 18\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"createDate\": \"2021-01-08\",\n\"times\": 8,\n\"total\": 71\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"createDate\": \"2021-01-07\",\n\"times\": 4,\n\"total\": 21\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"appOwner\": \"江超\",\n\"createDate\": \"2021-01-06\",\n\"times\": 1,\n\"total\": 7\n}\n]\n}\n}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p>按应用负责人维度统计</p>\n",
+        "project_id": 695,
+        "req_params": [],
+        "uid": 403,
+        "add_time": 1611213568,
+        "up_time": 1611309085,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/report/reportByDept",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37447,
+        "req_body_type": "json",
+        "res_body_type": "raw",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"deptId\":{\"type\":\"integer\"},\"startDate\":{\"type\":\"string\",\"description\":\"开始日期，格式yyyy-MM-dd\"},\"endDate\":{\"type\":\"string\",\"description\":\"结束日期，格式yyyy-MM-dd\"},\"status\":{\"type\":\"integer\",\"description\":\"状态：0表示未完成，1表示完成\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "按归属项目部维度统计",
+        "path": "/app/monitor/report/reportByDept",
+        "catid": 6184,
+        "markdown": "按归属项目部维度统计",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "600aa00ac46cf75ceea4128c",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\n\"msg\": \"成功\",\n\"result\": 1,\n\"data\": {\n\"雷神项目部\": [\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"createDate\": \"2021-01-10\",\n\"times\": 12,\n\"total\": 32\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"createDate\": \"2021-01-09\",\n\"times\": 12,\n\"total\": 32\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"createDate\": \"2021-01-08\",\n\"times\": 84,\n\"total\": 395\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"createDate\": \"2021-01-07\",\n\"times\": 62,\n\"total\": 207\n},\n{\n\"deptId\": \"1\",\n\"deptName\": \"雷神项目部\",\n\"createDate\": \"2021-01-06\",\n\"times\": 32,\n\"total\": 93\n}\n]\n}\n}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p>按归属项目部维度统计</p>\n",
+        "project_id": 695,
+        "req_params": [],
+        "uid": 403,
+        "add_time": 1611213568,
+        "up_time": 1611309066,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/report/reportByDate",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "done",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37446,
+        "req_body_type": "json",
+        "res_body_type": "raw",
+        "req_body_other": "{\"type\":\"object\",\"properties\":{\"startDate\":{\"type\":\"string\",\"description\":\"开始时间，格式yyyy-MM-dd\"},\"endDate\":{\"type\":\"string\",\"description\":\"结束时间，格式yyyy-MM-dd\"},\"status\":{\"type\":\"integer\",\"description\":\"状态：0表示未完成，1表示完成\"}},\"$schema\":\"http://json-schema.org/draft-04/schema#\"}",
+        "title": "按日期维度统计",
+        "path": "/app/monitor/report/reportByDate",
+        "catid": 6184,
+        "markdown": "按日期维度统计",
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "600a9fedc46cf75ceea4128b",
+            "name": "Content-Type",
+            "value": "application/json",
+            "example": "application/json"
+          }
+        ],
+        "req_query": [],
+        "res_body": "{\n\"msg\": \"成功\",\n\"result\": 1,\n\"data\": [\n{\n\"createDate\": \"2021-01-10\",\n\"times\": 12,\n\"total\": 32\n},\n{\n\"createDate\": \"2021-01-09\",\n\"times\": 12,\n\"total\": 32\n},\n{\n\"createDate\": \"2021-01-08\",\n\"times\": 84,\n\"total\": 395\n},\n{\n\"createDate\": \"2021-01-07\",\n\"times\": 62,\n\"total\": 207\n},\n{\n\"createDate\": \"2021-01-06\",\n\"times\": 32,\n\"total\": 93\n}\n]\n}",
+        "method": "POST",
+        "req_body_form": [],
+        "desc": "<p>按日期维度统计</p>\n",
+        "project_id": 695,
+        "req_params": [],
+        "uid": 403,
+        "add_time": 1611213568,
+        "up_time": 1611309037,
+        "__v": 0
+      }
+    ]
+  },
+  {
+    "index": 0,
+    "name": "应用异常监控",
+    "desc": null,
+    "add_time": 1608618794,
+    "up_time": 1608618794,
+    "list": [
+      {
+        "query_path": {
+          "path": "/app/monitor/config/fetch/es/kibana",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37019,
+        "method": "GET",
+        "catid": 6093,
+        "title": "拉取esIndex和KibanaId的映射关系",
+        "path": "/app/monitor/config/fetch/es/kibana",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 434,
+        "add_time": 1608618836,
+        "up_time": 1608621971,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "markdown": "```\n{\n  \"msg\": \"成功\",\n  \"result\": 1,\n  \"data\": [    {\n      \"esIndex\": \"ld-message-platform*\",\n      \"kibanaId\": \"ld-message-platform\"\n    },\n    {      \"esIndex\": \"ld-business-indoor-map-provider*\",\n      \"kibanaId\": \"e061d050-36a2-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"wmd-total-prod*\",\n      \"kibanaId\": \"wmd-total-prod\"\n    },\n    {      \"esIndex\": \"cnt-cdt-api-adcrm*\",\n      \"kibanaId\": \"cnt-cdt-api-adcrm\"\n    },\n    {      \"esIndex\": \"ld-op-merchant-job*\",\n      \"kibanaId\": \"1e4e9c60-1c93-11ea-8920-cdda8e7f24f7\"\n    },\n    {      \"esIndex\": \"ld-user-point-provider*\",\n      \"kibanaId\": \"fd2c8f90-b7f4-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ip-limiter*\",\n      \"kibanaId\": \"204e5e8b-0122-4d51-981a-82bfadd93b5a\"\n    },\n    {      \"esIndex\": \"ld-ad-api-*\",\n      \"kibanaId\": \"92960f40-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"nginx-error*\",\n      \"kibanaId\": \"2395e240-aaa2-11e9-a1d6-6961342e7bb2\"\n    },\n    {      \"esIndex\": \"erp-job*\",\n      \"kibanaId\": \"erp-job\"\n    },\n    {      \"esIndex\": \"erp-crm*\",\n      \"kibanaId\": \"ff645200-cfac-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-zhuying-device-job-executor*\",\n      \"kibanaId\": \"ld-zhuying-device-job-executor\"\n    },\n    {      \"esIndex\": \"ld-base-zhima-order-synchronizer*\",\n      \"kibanaId\": \"490f3e10-b987-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"erp-dubbo-consumer*\",\n      \"kibanaId\": \"f67befa0-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"erp-visit*\",\n      \"kibanaId\": \"9935c320-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-api-terminal-upgrade*\",\n      \"kibanaId\": \"ld-api-terminal-upgrade\"\n    },\n    {      \"esIndex\": \"ld-face-data-collect-provider*\",\n      \"kibanaId\": \"156a4d3e-c60b-4988-bbb6-b2086311f2ed\"\n    },\n    {      \"esIndex\": \"ld-base-shop-provider*\",\n      \"kibanaId\": \"a7e777c0-aebc-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-router-terminal-*\",\n      \"kibanaId\": \"bd0c8840-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-business-circle-enterprise-web*\",\n      \"kibanaId\": \"ld-business-circle-enterprise-web\"\n    },\n    {      \"esIndex\": \"*\",\n      \"kibanaId\": \"18e52b80-b038-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-zhuying-job-simflow-executor*\",\n      \"kibanaId\": \"418e4a40-fbb4-11e9-8361-fdedb88a9359\"\n    },\n    {      \"esIndex\": \"ld-security-risk-identification-provider*\",\n      \"kibanaId\": \"ld-security-risk-identification-provider\"\n    },\n    {      \"esIndex\": \"ld-base-thirdparty-call-*\",\n      \"kibanaId\": \"6f1d9ea0-fe12-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-sharding-order-provider-*\",\n      \"kibanaId\": \"7f976380-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-ka-management-provider*\",\n      \"kibanaId\": \"ld-ka-management-provider\"\n    },\n    {      \"esIndex\": \"wmd-total-test*\",\n      \"kibanaId\": \"wmd-total-test\"\n    },\n    {      \"esIndex\": \"erp-front*\",\n      \"kibanaId\": \"erp-front\"\n    },\n    {      \"esIndex\": \"ld-business-circle-web-*\",\n      \"kibanaId\": \"5a0eede0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"erp-gateway*\",\n      \"kibanaId\": \"erp-gateway\"\n    },\n    {      \"esIndex\": \"erp-time-attendance*\",\n      \"kibanaId\": \"erp-time-attendance\"\n    },\n    {      \"esIndex\": \"erp-message-push*\",\n      \"kibanaId\": \"erp-message-push\"\n    },\n    {      \"esIndex\": \"cnt-cdt-api-adcrm-*\",\n      \"kibanaId\": \"bed98aa0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-mq-minor-*\",\n      \"kibanaId\": \"dadef650-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-terminal-provider*\",\n      \"kibanaId\": \"ld-terminal-provider\"\n    },\n    {      \"esIndex\": \"terminal-ad-api*\",\n      \"kibanaId\": \"terminal-ad-api\"\n    },\n    {      \"esIndex\": \"ld-mp-promotion-provider*\",\n      \"kibanaId\": \"683233e0-be5c-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-crm-data-*\",\n      \"kibanaId\": \"40d67a50-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-cache-cdb-provider-*\",\n      \"kibanaId\": \"511b5d40-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-device-ext-*\",\n      \"kibanaId\": \"885cdf40-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-erp-hr*\",\n      \"kibanaId\": \"ld-erp-hr\"\n    },\n    {      \"esIndex\": \"erp-es*\",\n      \"kibanaId\": \"18361f30-ce26-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-user-point-web*\",\n      \"kibanaId\": \"fdd7b0b0-b8c5-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-op-offline-web*\",\n      \"kibanaId\": \"903829b0-ffa4-11e9-b969-efaee6dd7556\"\n    },\n    {      \"esIndex\": \"erp-file-center*\",\n      \"kibanaId\": \"233a8b80-f493-11e9-a45b-9bdfce85d063\"\n    },\n    {      \"esIndex\": \"ld-business-circle-enterprise-web-*\",\n      \"kibanaId\": \"6a820cc0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-payment-provider*\",\n      \"kibanaId\": \"ld-base-payment-provider\"\n    },\n    {      \"esIndex\": \"ld-statistics-entrance-wmd*\",\n      \"kibanaId\": \"6cd004b0-de76-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-base-weixin-order-provider*\",\n      \"kibanaId\": \"f0a8eeb0-b986-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"erp-mission*\",\n      \"kibanaId\": \"erp-mission\"\n    },\n    {      \"esIndex\": \"ld-erp-cdt*\",\n      \"kibanaId\": \"ld-erp-cdt\"\n    },\n    {      \"esIndex\": \"ld-base-aliauth-provider*\",\n      \"kibanaId\": \"95fc92d0-9ef7-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-mq-minor*\",\n      \"kibanaId\": \"ld-mq-minor\"\n    },\n    {      \"esIndex\": \"ld-dzb-api*\",\n      \"kibanaId\": \"ld-dzb-api\"\n    },\n    {      \"esIndex\": \"ld-api-device*\",\n      \"kibanaId\": \"e5904240-de74-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-op-activity-web*\",\n      \"kibanaId\": \"b30fde30-d847-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-base-user*\",\n      \"kibanaId\": \"ld-base-user\"\n    },\n    {      \"esIndex\": \"erp-eureka-*\",\n      \"kibanaId\": \"ae28c680-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-business-circle-provider-*\",\n      \"kibanaId\": \"6269c0f0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-cs-consumer*\",\n      \"kibanaId\": \"ld-cs-consumer\"\n    },\n    {      \"esIndex\": \"ld-mq-high-provider-*\",\n      \"kibanaId\": \"e4688560-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-devops-task*\",\n      \"kibanaId\": \"ld-devops-task\"\n    },\n    {      \"esIndex\": \".management-beats\",\n      \"kibanaId\": \"faa07480-26e4-11ea-b0d4-3dbf786dec8f\"\n    },\n    {      \"esIndex\": \"ld-ka-management-2*\",\n      \"kibanaId\": \"05ea18c0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"nginx-access*\",\n      \"kibanaId\": \"43d33500-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-merchant-coupon-platform*\",\n      \"kibanaId\": \"25ae0720-af74-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-base-taskcontrol*\",\n      \"kibanaId\": \"28aefe20-addf-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"erp-devops*\",\n      \"kibanaId\": \"78b42700-af8e-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-cdt-api*\",\n      \"kibanaId\": \"c9ae66c0-aac5-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"erp-qyld*\",\n      \"kibanaId\": \"81913330-c500-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"erp-config*\",\n      \"kibanaId\": \"828b2660-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"crm-api*\",\n      \"kibanaId\": \"crm-api\"\n    },\n    {      \"esIndex\": \"ld-hot-api*\",\n      \"kibanaId\": \"ld-hot-api\"\n    },\n    {      \"esIndex\": \"ld-merchant-api*\",\n      \"kibanaId\": \"44836fe0-aebc-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-web-user-operation*\",\n      \"kibanaId\": \"eb4e7f85-1e2e-4dc0-938d-9d4ea9e3d723\"\n    },\n    {      \"esIndex\": \"erp-statistic*\",\n      \"kibanaId\": \"b6499c20-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"erp-cdt*\",\n      \"kibanaId\": \"e5b02970-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-base-wxauth*\",\n      \"kibanaId\": \"aeed3cf0-ac5d-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-zookeeer-*\",\n      \"kibanaId\": \"96293d90-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-vip-provider*\",\n      \"kibanaId\": \"ld-base-vip-provider\"\n    },\n    {      \"esIndex\": \"ld-zhuying-lock-cbd-service*\",\n      \"kibanaId\": \"838a0ef0-5d63-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"devops-api*\",\n      \"kibanaId\": \"devops-api\"\n    },\n    {      \"esIndex\": \"terminal-xjy-device*\",\n      \"kibanaId\": \"b18c4530-aac5-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-web-inner*\",\n      \"kibanaId\": \"ld-web-inner\"\n    },\n    {      \"esIndex\": \"ld-op-merchant-web*\",\n      \"kibanaId\": \"117d2770-f495-11e9-a45b-9bdfce85d063\"\n    },\n    {      \"esIndex\": \"erp-user-*\",\n      \"kibanaId\": \"9aa1b0e0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-crm-money*\",\n      \"kibanaId\": \"92435ae0-a9f9-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"map-web*\",\n      \"kibanaId\": \"0daad870-118e-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"terminal-ad-admin-api*\",\n      \"kibanaId\": \"terminal-ad-admin-api\"\n    },\n    {      \"esIndex\": \"ld-wxpay-order-job*\",\n      \"kibanaId\": \"60b53160-b40e-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-order-api*\",\n      \"kibanaId\": \"ld-order-api\"\n    },\n    {      \"esIndex\": \"port-agent*\",\n      \"kibanaId\": \"bad38b09-38e9-4a3f-84ac-271617f4317d\"\n    },\n    {      \"esIndex\": \"nginx-error-*\",\n      \"kibanaId\": \"nginx-error-\"\n    },\n    {      \"esIndex\": \"ld-wxpay-order-provider*\",\n      \"kibanaId\": \"a02d6fd0-ae80-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-devops-api*\",\n      \"kibanaId\": \"ld-devops-api\"\n    },\n    {      \"esIndex\": \"erp-warm*\",\n      \"kibanaId\": \"ce12ef50-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-ad-job-*\",\n      \"kibanaId\": \"bace9c50-8090-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"ld-crm-api*\",\n      \"kibanaId\": \"ld-crm-api\"\n    },\n    {      \"esIndex\": \"ld-op-merchant-provider*\",\n      \"kibanaId\": \"063ee380-f495-11e9-a45b-9bdfce85d063\"\n    },\n    {      \"esIndex\": \"ld-zhuying-job-main-executor*\",\n      \"kibanaId\": \"ld-zhuying-job-main-executor\"\n    },\n    {      \"esIndex\": \"ld-xts-api*\",\n      \"kibanaId\": \"ld-xts-api\"\n    },\n    {      \"esIndex\": \"ld-business-circle-app*\",\n      \"kibanaId\": \"3866ec70-127e-11ea-8920-cdda8e7f24f7\"\n    },\n    {      \"esIndex\": \"ld-base-cache-device-provider*\",\n      \"kibanaId\": \"42668be0-d854-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-mq-db-provider*\",\n      \"kibanaId\": \"ee95fca0-2162-11ea-8920-cdda8e7f24f7\"\n    },\n    {      \"esIndex\": \"ld-cache-cdb-provider*\",\n      \"kibanaId\": \"ld-cache-cdb-provider\"\n    },\n    {      \"esIndex\": \"ld-biz-wxpay*\",\n      \"kibanaId\": \"ld-biz-wxpay\"\n    },\n    {      \"esIndex\": \"ld-base-thirdparty-call*\",\n      \"kibanaId\": \"ld-base-thirdparty-call\"\n    },\n    {      \"esIndex\": \"ld-base-user-operation*\",\n      \"kibanaId\": \"2c505c4e-c5c7-4893-88b6-b244ee7e74b8\"\n    },\n    {      \"esIndex\": \"ld-erp-config*\",\n      \"kibanaId\": \"ld-erp-config\"\n    },\n    {      \"esIndex\": \"ld-cache-db-provider-*\",\n      \"kibanaId\": \"490fbba0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-cmb-payment-web*\",\n      \"kibanaId\": \"b54210e0-11b5-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"ld-erp-es-provider*\",\n      \"kibanaId\": \"ld-erp-es-provider\"\n    },\n    {      \"esIndex\": \"ld-ad-job*\",\n      \"kibanaId\": \"ld-ad-job\"\n    },\n    {      \"esIndex\": \"ld-biz-user-provider*\",\n      \"kibanaId\": \"ld-biz-user-provider\"\n    },\n    {      \"esIndex\": \"erp-eureka*\",\n      \"kibanaId\": \"erp-eureka\"\n    },\n    {      \"esIndex\": \"ld-cs-api*\",\n      \"kibanaId\": \"c8f70210-a0b4-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-cs-consumer-*\",\n      \"kibanaId\": \"2e558a10-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-web-openapi*\",\n      \"kibanaId\": \"82a39680-2e03-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"ld-erp-push*\",\n      \"kibanaId\": \"ld-erp-push\"\n    },\n    {      \"esIndex\": \"terminal-ad-job*\",\n      \"kibanaId\": \"terminal-ad-job\"\n    },\n    {      \"esIndex\": \"ld-base-vip-provider-*\",\n      \"kibanaId\": \"780fe600-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-android-device-server*\",\n      \"kibanaId\": \"96b81e00-9f20-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-payment*\",\n      \"kibanaId\": \"b7d847f0-ab8b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-dzb-api-*\",\n      \"kibanaId\": \"0ef290f0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-ka-management-provider-*\",\n      \"kibanaId\": \"f77b0740-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-aliauth*\",\n      \"kibanaId\": \"ld-base-aliauth\"\n    },\n    {      \"esIndex\": \"ld-sharding-influxdb*\",\n      \"kibanaId\": \"ld-sharding-influxdb\"\n    },\n    {      \"esIndex\": \"ld-terminal-provider-*\",\n      \"kibanaId\": \"b4afe070-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"flow-admin*\",\n      \"kibanaId\": \"3a84f98c-f77d-49e0-b74a-fa5c8ccf12d5\"\n    },\n    {      \"esIndex\": \"platform-api*\",\n      \"kibanaId\": \"149ffb20-941e-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-statisticss-server-wmd*\",\n      \"kibanaId\": \"815b25ff-cf1a-4568-be6f-4e63cd20c0a2\"\n    },\n    {      \"esIndex\": \"map-admin*\",\n      \"kibanaId\": \"e022a810-118d-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"*erp-*\",\n      \"kibanaId\": \"44104a00-b46b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-op-merchant-admin*\",\n      \"kibanaId\": \"d3bd3d80-8913-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"erp-dubbo-provider*\",\n      \"kibanaId\": \"07c57150-ce26-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-base-gray*\",\n      \"kibanaId\": \"49ca8500-c48e-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-terminal-upgrade-api*\",\n      \"kibanaId\": \"9594a760-ba78-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-base-cache-device-ext-provider*\",\n      \"kibanaId\": \"4e980970-d854-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"zhuying-error-log*\",\n      \"kibanaId\": \"zhuying-error-log\"\n    },\n    {      \"esIndex\": \"ld-op-merchant-platform*\",\n      \"kibanaId\": \"2ebfe680-1c93-11ea-8920-cdda8e7f24f7\"\n    },\n    {      \"esIndex\": \"ld-base-sharding-transaction-record-provider*\",\n      \"kibanaId\": \"18c83cc0-31e1-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"ld-base-sharding-order-provider*\",\n      \"kibanaId\": \"ld-base-sharding-order-provider\"\n    },\n    {      \"esIndex\": \"ld-biz-user-operation*\",\n      \"kibanaId\": \"69af4992-1592-4b4e-837d-963d1d48e129\"\n    },\n    {      \"esIndex\": \"ld-ticket-vip-web*\",\n      \"kibanaId\": \"90aa23c0-d8f4-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-erp-ka*\",\n      \"kibanaId\": \"c3b87ce0-102a-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"ld-business-circle-ad*\",\n      \"kibanaId\": \"ld-business-circle-ad\"\n    },\n    {      \"esIndex\": \"ld-cs-2*\",\n      \"kibanaId\": \"3872cda0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-push-provider*\",\n      \"kibanaId\": \"3df589e0-c48f-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-business-editor-map*\",\n      \"kibanaId\": \"ld-business-editor-map\"\n    },\n    {      \"esIndex\": \"erp-workflow*\",\n      \"kibanaId\": \"70bf0730-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-base-weixin-order-recent-synchronizer*\",\n      \"kibanaId\": \"60aa59b0-1189-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"*crm-*\",\n      \"kibanaId\": \"78b5eb70-b46b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-ticket*\",\n      \"kibanaId\": \"a6ae8370-2569-11ea-b0d4-3dbf786dec8f\"\n    },\n    {      \"esIndex\": \"ld-devops-task-*\",\n      \"kibanaId\": \"1bab66f0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"xxl-job-admin*\",\n      \"kibanaId\": \"xxl-job-admin\"\n    },\n    {      \"esIndex\": \"ld-erp-cdtwarm*\",\n      \"kibanaId\": \"ld-erp-cdtwarm\"\n    },\n    {      \"esIndex\": \"terminal-ad-job-*\",\n      \"kibanaId\": \"a0f5a300-8090-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"ld-base-sharding-order-heterogeneous-data-sync*\",\n      \"kibanaId\": \"5ee333d0-b019-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-base-cache-device-ext-persistent*\",\n      \"kibanaId\": \"5d121860-3844-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"ld-business-editor-map-provider*\",\n      \"kibanaId\": \"ld-business-editor-map-provider\"\n    },\n    {      \"esIndex\": \"leishen-error-log*\",\n      \"kibanaId\": \"leishen-error-log\"\n    },\n    {      \"esIndex\": \"ld-mq-high-provider*\",\n      \"kibanaId\": \"ld-mq-high-provider\"\n    },\n    {      \"esIndex\": \"ld-order-api-*\",\n      \"kibanaId\": \"cf94a470-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-erp-devops*\",\n      \"kibanaId\": \"ld-erp-devops\"\n    },\n    {      \"esIndex\": \"ld-biz-user-provider-*\",\n      \"kibanaId\": \"40327f80-7a13-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"cnt-cdt-api*\",\n      \"kibanaId\": \"cnt-cdt-api\"\n    },\n    {      \"esIndex\": \"ld-merchant-coupon-job*\",\n      \"kibanaId\": \"c3fe0dd0-cdf1-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-base-task-*\",\n      \"kibanaId\": \"cbe5a490-ab8b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-shoppoint-store*\",\n      \"kibanaId\": \"90b7a770-aea6-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-biz-rent*\",\n      \"kibanaId\": \"db49eb80-ab8b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-cmb-payment-provider*\",\n      \"kibanaId\": \"c8098000-11b5-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"ld-base-device-ext*\",\n      \"kibanaId\": \"ld-base-device-ext\"\n    },\n    {      \"esIndex\": \"ld-base-cache-device-persistent*\",\n      \"kibanaId\": \"441b8fd0-3844-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"jvm-gc-collection*\",\n      \"kibanaId\": \"54f8d8d0-aac3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-enterprise-wechat-web*\",\n      \"kibanaId\": \"ba5fe640-bd93-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-base-user-provider*\",\n      \"kibanaId\": \"07ca7780-7a16-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"ld-statistics-server-wmd*\",\n      \"kibanaId\": \"7a3e9620-de76-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-business-circle-web*\",\n      \"kibanaId\": \"ld-business-circle-web\"\n    },\n    {      \"esIndex\": \"crm-api-*\",\n      \"kibanaId\": \"b68d0f70-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-weixin-order-synchronizer*\",\n      \"kibanaId\": \"1c31cca0-b987-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-devops-job*\",\n      \"kibanaId\": \"ld-devops-job\"\n    },\n    {      \"esIndex\": \"ld-api-auth*\",\n      \"kibanaId\": \"a15db600-ac5d-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-merchant-provider*\",\n      \"kibanaId\": \"d9f46cf0-aebc-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-bi-management*\",\n      \"kibanaId\": \"b32c1ba4-58ae-4b3e-8220-6fa7037baec1\"\n    },\n    {      \"esIndex\": \"port-admin*\",\n      \"kibanaId\": \"port-admin\"\n    },\n    {      \"esIndex\": \"ld-base-device*\",\n      \"kibanaId\": \"e6f35a1d-bbaa-4ebc-bd8f-4c251fc4beb6\"\n    },\n    {      \"esIndex\": \"erp-user*\",\n      \"kibanaId\": \"erp-user\"\n    },\n    {      \"esIndex\": \"ld-push-dubbo*\",\n      \"kibanaId\": \"ld-push-dubbo\"\n    },\n    {      \"esIndex\": \"base-device*\",\n      \"kibanaId\": \"base-device\"\n    },\n    {      \"esIndex\": \"ld-zookeeer*\",\n      \"kibanaId\": \"ld-zookeeer\"\n    },\n    {      \"esIndex\": \"ld-message-platform-*\",\n      \"kibanaId\": \"ecaaee70-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"apm-*\",\n      \"kibanaId\": \"apm-*\"\n    },\n    {      \"esIndex\": \"ld-ad-api*\",\n      \"kibanaId\": \"ld-ad-api\"\n    },\n    {      \"esIndex\": \"ld-base-wxauth-provider-*\",\n      \"kibanaId\": \"670ffdd0-7a13-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"erp-ka*\",\n      \"kibanaId\": \"erp-ka\"\n    },\n    {      \"esIndex\": \"ld-base-zhima-order-recent-synchronizer*\",\n      \"kibanaId\": \"ee7378a0-118c-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"ld-devops-api-*\",\n      \"kibanaId\": \"253236e0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-rent-ext*\",\n      \"kibanaId\": \"ecf2a430-ab8b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-erp-crm*\",\n      \"kibanaId\": \"ld-erp-crm\"\n    },\n    {      \"esIndex\": \"base-device-*\",\n      \"kibanaId\": \"d163a2a0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-enterprise-wechat-provider*\",\n      \"kibanaId\": \"d4937820-bd92-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-xts-api-*\",\n      \"kibanaId\": \"9eab95d0-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"terminal-ad-api-*\",\n      \"kibanaId\": \"7e98fbc0-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-biz-device*\",\n      \"kibanaId\": \"ld-biz-device\"\n    },\n    {      \"esIndex\": \"ld-business-indoor-map-2*\",\n      \"kibanaId\": \"046f17a0-36a3-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"cnt-cdt-api-2*\",\n      \"kibanaId\": \"c921d5d0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-erp-assist*\",\n      \"kibanaId\": \"9f865460-bfd9-11e9-8f37-7d94feb35a2f\"\n    },\n    {      \"esIndex\": \"ld-business-circle-ad-*\",\n      \"kibanaId\": \"71733db0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-enterprise-web*\",\n      \"kibanaId\": \"31a59ac0-ae89-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"wb-test-log*\",\n      \"kibanaId\": \"98a19090-9050-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"terminal-ad-admin-api-*\",\n      \"kibanaId\": \"87d7c630-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"erp-mission-job*\",\n      \"kibanaId\": \"erp-mission-job\"\n    },\n    {      \"esIndex\": \"ld-business-circle-provider*\",\n      \"kibanaId\": \"ld-business-circle-provider\"\n    },\n    {      \"esIndex\": \"crm-job*\",\n      \"kibanaId\": \"c0cc6740-95b2-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-wxpay-provider*\",\n      \"kibanaId\": \"ld-base-wxpay-provider\"\n    },\n    {      \"esIndex\": \"ld-base-zhima-order-provider*\",\n      \"kibanaId\": \"37da7ce0-b987-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"cleaner-sync*\",\n      \"kibanaId\": \"cleaner-sync\"\n    },\n    {      \"esIndex\": \"terminal-cdt-api*\",\n      \"kibanaId\": \"be8b9a10-aac5-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-router-terminal*\",\n      \"kibanaId\": \"ld-router-terminal\"\n    },\n    {      \"esIndex\": \"ld-indoor-map-data-provider*\",\n      \"kibanaId\": \"ld-indoor-map-data-provider\"\n    },\n    {      \"esIndex\": \"ld-base-wxauth-provider*\",\n      \"kibanaId\": \"ld-base-wxauth-provider\"\n    },\n    {      \"esIndex\": \"ld-base-device-20*\",\n      \"kibanaId\": \"5a6c9670-3461-11eb-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-user-20*\",\n      \"kibanaId\": \"e7764a40-9103-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-ops-confirm-provider*\",\n      \"kibanaId\": \"97429520-c4a2-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-wxpay-order*\",\n      \"kibanaId\": \"65c8df70-ac5d-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-web-zhuying*\",\n      \"kibanaId\": \"3c6a7020-2602-11ea-b0d4-3dbf786dec8f\"\n    },\n    {      \"esIndex\": \"erp-gateway-*\",\n      \"kibanaId\": \"a6940290-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-mp-promotion-web*\",\n      \"kibanaId\": \"bfac4b30-d84a-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-zhuying-job-support-executor*\",\n      \"kibanaId\": \"ld-zhuying-job-support-executor\"\n    },\n    {      \"esIndex\": \"ld-third-member*\",\n      \"kibanaId\": \"ld-third-member\"\n    },\n    {      \"esIndex\": \"ld-biz-ticket*\",\n      \"kibanaId\": \"97961290-2569-11ea-b0d4-3dbf786dec8f\"\n    },\n    {      \"esIndex\": \"ld-third-member-*\",\n      \"kibanaId\": \"a54b4b60-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"cnt-cdt-api-backend*\",\n      \"kibanaId\": \"fa071200-125c-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"ld-business-indoor-map*\",\n      \"kibanaId\": \"ld-business-indoor-map\"\n    },\n    {      \"esIndex\": \"ld-base-task*\",\n      \"kibanaId\": \"ld-base-task\"\n    }  ]\n}\n```",
+        "desc": "<pre><code>{\n  \"msg\": \"成功\",\n  \"result\": 1,\n  \"data\": [    {\n      \"esIndex\": \"ld-message-platform*\",\n      \"kibanaId\": \"ld-message-platform\"\n    },\n    {      \"esIndex\": \"ld-business-indoor-map-provider*\",\n      \"kibanaId\": \"e061d050-36a2-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"wmd-total-prod*\",\n      \"kibanaId\": \"wmd-total-prod\"\n    },\n    {      \"esIndex\": \"cnt-cdt-api-adcrm*\",\n      \"kibanaId\": \"cnt-cdt-api-adcrm\"\n    },\n    {      \"esIndex\": \"ld-op-merchant-job*\",\n      \"kibanaId\": \"1e4e9c60-1c93-11ea-8920-cdda8e7f24f7\"\n    },\n    {      \"esIndex\": \"ld-user-point-provider*\",\n      \"kibanaId\": \"fd2c8f90-b7f4-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ip-limiter*\",\n      \"kibanaId\": \"204e5e8b-0122-4d51-981a-82bfadd93b5a\"\n    },\n    {      \"esIndex\": \"ld-ad-api-*\",\n      \"kibanaId\": \"92960f40-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"nginx-error*\",\n      \"kibanaId\": \"2395e240-aaa2-11e9-a1d6-6961342e7bb2\"\n    },\n    {      \"esIndex\": \"erp-job*\",\n      \"kibanaId\": \"erp-job\"\n    },\n    {      \"esIndex\": \"erp-crm*\",\n      \"kibanaId\": \"ff645200-cfac-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-zhuying-device-job-executor*\",\n      \"kibanaId\": \"ld-zhuying-device-job-executor\"\n    },\n    {      \"esIndex\": \"ld-base-zhima-order-synchronizer*\",\n      \"kibanaId\": \"490f3e10-b987-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"erp-dubbo-consumer*\",\n      \"kibanaId\": \"f67befa0-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"erp-visit*\",\n      \"kibanaId\": \"9935c320-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-api-terminal-upgrade*\",\n      \"kibanaId\": \"ld-api-terminal-upgrade\"\n    },\n    {      \"esIndex\": \"ld-face-data-collect-provider*\",\n      \"kibanaId\": \"156a4d3e-c60b-4988-bbb6-b2086311f2ed\"\n    },\n    {      \"esIndex\": \"ld-base-shop-provider*\",\n      \"kibanaId\": \"a7e777c0-aebc-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-router-terminal-*\",\n      \"kibanaId\": \"bd0c8840-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-business-circle-enterprise-web*\",\n      \"kibanaId\": \"ld-business-circle-enterprise-web\"\n    },\n    {      \"esIndex\": \"*\",\n      \"kibanaId\": \"18e52b80-b038-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-zhuying-job-simflow-executor*\",\n      \"kibanaId\": \"418e4a40-fbb4-11e9-8361-fdedb88a9359\"\n    },\n    {      \"esIndex\": \"ld-security-risk-identification-provider*\",\n      \"kibanaId\": \"ld-security-risk-identification-provider\"\n    },\n    {      \"esIndex\": \"ld-base-thirdparty-call-*\",\n      \"kibanaId\": \"6f1d9ea0-fe12-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-sharding-order-provider-*\",\n      \"kibanaId\": \"7f976380-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-ka-management-provider*\",\n      \"kibanaId\": \"ld-ka-management-provider\"\n    },\n    {      \"esIndex\": \"wmd-total-test*\",\n      \"kibanaId\": \"wmd-total-test\"\n    },\n    {      \"esIndex\": \"erp-front*\",\n      \"kibanaId\": \"erp-front\"\n    },\n    {      \"esIndex\": \"ld-business-circle-web-*\",\n      \"kibanaId\": \"5a0eede0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"erp-gateway*\",\n      \"kibanaId\": \"erp-gateway\"\n    },\n    {      \"esIndex\": \"erp-time-attendance*\",\n      \"kibanaId\": \"erp-time-attendance\"\n    },\n    {      \"esIndex\": \"erp-message-push*\",\n      \"kibanaId\": \"erp-message-push\"\n    },\n    {      \"esIndex\": \"cnt-cdt-api-adcrm-*\",\n      \"kibanaId\": \"bed98aa0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-mq-minor-*\",\n      \"kibanaId\": \"dadef650-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-terminal-provider*\",\n      \"kibanaId\": \"ld-terminal-provider\"\n    },\n    {      \"esIndex\": \"terminal-ad-api*\",\n      \"kibanaId\": \"terminal-ad-api\"\n    },\n    {      \"esIndex\": \"ld-mp-promotion-provider*\",\n      \"kibanaId\": \"683233e0-be5c-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-crm-data-*\",\n      \"kibanaId\": \"40d67a50-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-cache-cdb-provider-*\",\n      \"kibanaId\": \"511b5d40-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-device-ext-*\",\n      \"kibanaId\": \"885cdf40-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-erp-hr*\",\n      \"kibanaId\": \"ld-erp-hr\"\n    },\n    {      \"esIndex\": \"erp-es*\",\n      \"kibanaId\": \"18361f30-ce26-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-user-point-web*\",\n      \"kibanaId\": \"fdd7b0b0-b8c5-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-op-offline-web*\",\n      \"kibanaId\": \"903829b0-ffa4-11e9-b969-efaee6dd7556\"\n    },\n    {      \"esIndex\": \"erp-file-center*\",\n      \"kibanaId\": \"233a8b80-f493-11e9-a45b-9bdfce85d063\"\n    },\n    {      \"esIndex\": \"ld-business-circle-enterprise-web-*\",\n      \"kibanaId\": \"6a820cc0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-payment-provider*\",\n      \"kibanaId\": \"ld-base-payment-provider\"\n    },\n    {      \"esIndex\": \"ld-statistics-entrance-wmd*\",\n      \"kibanaId\": \"6cd004b0-de76-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-base-weixin-order-provider*\",\n      \"kibanaId\": \"f0a8eeb0-b986-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"erp-mission*\",\n      \"kibanaId\": \"erp-mission\"\n    },\n    {      \"esIndex\": \"ld-erp-cdt*\",\n      \"kibanaId\": \"ld-erp-cdt\"\n    },\n    {      \"esIndex\": \"ld-base-aliauth-provider*\",\n      \"kibanaId\": \"95fc92d0-9ef7-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-mq-minor*\",\n      \"kibanaId\": \"ld-mq-minor\"\n    },\n    {      \"esIndex\": \"ld-dzb-api*\",\n      \"kibanaId\": \"ld-dzb-api\"\n    },\n    {      \"esIndex\": \"ld-api-device*\",\n      \"kibanaId\": \"e5904240-de74-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-op-activity-web*\",\n      \"kibanaId\": \"b30fde30-d847-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-base-user*\",\n      \"kibanaId\": \"ld-base-user\"\n    },\n    {      \"esIndex\": \"erp-eureka-*\",\n      \"kibanaId\": \"ae28c680-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-business-circle-provider-*\",\n      \"kibanaId\": \"6269c0f0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-cs-consumer*\",\n      \"kibanaId\": \"ld-cs-consumer\"\n    },\n    {      \"esIndex\": \"ld-mq-high-provider-*\",\n      \"kibanaId\": \"e4688560-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-devops-task*\",\n      \"kibanaId\": \"ld-devops-task\"\n    },\n    {      \"esIndex\": \".management-beats\",\n      \"kibanaId\": \"faa07480-26e4-11ea-b0d4-3dbf786dec8f\"\n    },\n    {      \"esIndex\": \"ld-ka-management-2*\",\n      \"kibanaId\": \"05ea18c0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"nginx-access*\",\n      \"kibanaId\": \"43d33500-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-merchant-coupon-platform*\",\n      \"kibanaId\": \"25ae0720-af74-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-base-taskcontrol*\",\n      \"kibanaId\": \"28aefe20-addf-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"erp-devops*\",\n      \"kibanaId\": \"78b42700-af8e-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-cdt-api*\",\n      \"kibanaId\": \"c9ae66c0-aac5-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"erp-qyld*\",\n      \"kibanaId\": \"81913330-c500-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"erp-config*\",\n      \"kibanaId\": \"828b2660-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"crm-api*\",\n      \"kibanaId\": \"crm-api\"\n    },\n    {      \"esIndex\": \"ld-hot-api*\",\n      \"kibanaId\": \"ld-hot-api\"\n    },\n    {      \"esIndex\": \"ld-merchant-api*\",\n      \"kibanaId\": \"44836fe0-aebc-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-web-user-operation*\",\n      \"kibanaId\": \"eb4e7f85-1e2e-4dc0-938d-9d4ea9e3d723\"\n    },\n    {      \"esIndex\": \"erp-statistic*\",\n      \"kibanaId\": \"b6499c20-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"erp-cdt*\",\n      \"kibanaId\": \"e5b02970-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-base-wxauth*\",\n      \"kibanaId\": \"aeed3cf0-ac5d-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-zookeeer-*\",\n      \"kibanaId\": \"96293d90-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-vip-provider*\",\n      \"kibanaId\": \"ld-base-vip-provider\"\n    },\n    {      \"esIndex\": \"ld-zhuying-lock-cbd-service*\",\n      \"kibanaId\": \"838a0ef0-5d63-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"devops-api*\",\n      \"kibanaId\": \"devops-api\"\n    },\n    {      \"esIndex\": \"terminal-xjy-device*\",\n      \"kibanaId\": \"b18c4530-aac5-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-web-inner*\",\n      \"kibanaId\": \"ld-web-inner\"\n    },\n    {      \"esIndex\": \"ld-op-merchant-web*\",\n      \"kibanaId\": \"117d2770-f495-11e9-a45b-9bdfce85d063\"\n    },\n    {      \"esIndex\": \"erp-user-*\",\n      \"kibanaId\": \"9aa1b0e0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-crm-money*\",\n      \"kibanaId\": \"92435ae0-a9f9-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"map-web*\",\n      \"kibanaId\": \"0daad870-118e-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"terminal-ad-admin-api*\",\n      \"kibanaId\": \"terminal-ad-admin-api\"\n    },\n    {      \"esIndex\": \"ld-wxpay-order-job*\",\n      \"kibanaId\": \"60b53160-b40e-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-order-api*\",\n      \"kibanaId\": \"ld-order-api\"\n    },\n    {      \"esIndex\": \"port-agent*\",\n      \"kibanaId\": \"bad38b09-38e9-4a3f-84ac-271617f4317d\"\n    },\n    {      \"esIndex\": \"nginx-error-*\",\n      \"kibanaId\": \"nginx-error-\"\n    },\n    {      \"esIndex\": \"ld-wxpay-order-provider*\",\n      \"kibanaId\": \"a02d6fd0-ae80-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-devops-api*\",\n      \"kibanaId\": \"ld-devops-api\"\n    },\n    {      \"esIndex\": \"erp-warm*\",\n      \"kibanaId\": \"ce12ef50-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-ad-job-*\",\n      \"kibanaId\": \"bace9c50-8090-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"ld-crm-api*\",\n      \"kibanaId\": \"ld-crm-api\"\n    },\n    {      \"esIndex\": \"ld-op-merchant-provider*\",\n      \"kibanaId\": \"063ee380-f495-11e9-a45b-9bdfce85d063\"\n    },\n    {      \"esIndex\": \"ld-zhuying-job-main-executor*\",\n      \"kibanaId\": \"ld-zhuying-job-main-executor\"\n    },\n    {      \"esIndex\": \"ld-xts-api*\",\n      \"kibanaId\": \"ld-xts-api\"\n    },\n    {      \"esIndex\": \"ld-business-circle-app*\",\n      \"kibanaId\": \"3866ec70-127e-11ea-8920-cdda8e7f24f7\"\n    },\n    {      \"esIndex\": \"ld-base-cache-device-provider*\",\n      \"kibanaId\": \"42668be0-d854-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-mq-db-provider*\",\n      \"kibanaId\": \"ee95fca0-2162-11ea-8920-cdda8e7f24f7\"\n    },\n    {      \"esIndex\": \"ld-cache-cdb-provider*\",\n      \"kibanaId\": \"ld-cache-cdb-provider\"\n    },\n    {      \"esIndex\": \"ld-biz-wxpay*\",\n      \"kibanaId\": \"ld-biz-wxpay\"\n    },\n    {      \"esIndex\": \"ld-base-thirdparty-call*\",\n      \"kibanaId\": \"ld-base-thirdparty-call\"\n    },\n    {      \"esIndex\": \"ld-base-user-operation*\",\n      \"kibanaId\": \"2c505c4e-c5c7-4893-88b6-b244ee7e74b8\"\n    },\n    {      \"esIndex\": \"ld-erp-config*\",\n      \"kibanaId\": \"ld-erp-config\"\n    },\n    {      \"esIndex\": \"ld-cache-db-provider-*\",\n      \"kibanaId\": \"490fbba0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-cmb-payment-web*\",\n      \"kibanaId\": \"b54210e0-11b5-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"ld-erp-es-provider*\",\n      \"kibanaId\": \"ld-erp-es-provider\"\n    },\n    {      \"esIndex\": \"ld-ad-job*\",\n      \"kibanaId\": \"ld-ad-job\"\n    },\n    {      \"esIndex\": \"ld-biz-user-provider*\",\n      \"kibanaId\": \"ld-biz-user-provider\"\n    },\n    {      \"esIndex\": \"erp-eureka*\",\n      \"kibanaId\": \"erp-eureka\"\n    },\n    {      \"esIndex\": \"ld-cs-api*\",\n      \"kibanaId\": \"c8f70210-a0b4-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-cs-consumer-*\",\n      \"kibanaId\": \"2e558a10-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-web-openapi*\",\n      \"kibanaId\": \"82a39680-2e03-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"ld-erp-push*\",\n      \"kibanaId\": \"ld-erp-push\"\n    },\n    {      \"esIndex\": \"terminal-ad-job*\",\n      \"kibanaId\": \"terminal-ad-job\"\n    },\n    {      \"esIndex\": \"ld-base-vip-provider-*\",\n      \"kibanaId\": \"780fe600-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-android-device-server*\",\n      \"kibanaId\": \"96b81e00-9f20-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-payment*\",\n      \"kibanaId\": \"b7d847f0-ab8b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-dzb-api-*\",\n      \"kibanaId\": \"0ef290f0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-ka-management-provider-*\",\n      \"kibanaId\": \"f77b0740-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-aliauth*\",\n      \"kibanaId\": \"ld-base-aliauth\"\n    },\n    {      \"esIndex\": \"ld-sharding-influxdb*\",\n      \"kibanaId\": \"ld-sharding-influxdb\"\n    },\n    {      \"esIndex\": \"ld-terminal-provider-*\",\n      \"kibanaId\": \"b4afe070-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"flow-admin*\",\n      \"kibanaId\": \"3a84f98c-f77d-49e0-b74a-fa5c8ccf12d5\"\n    },\n    {      \"esIndex\": \"platform-api*\",\n      \"kibanaId\": \"149ffb20-941e-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-statisticss-server-wmd*\",\n      \"kibanaId\": \"815b25ff-cf1a-4568-be6f-4e63cd20c0a2\"\n    },\n    {      \"esIndex\": \"map-admin*\",\n      \"kibanaId\": \"e022a810-118d-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"*erp-*\",\n      \"kibanaId\": \"44104a00-b46b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-op-merchant-admin*\",\n      \"kibanaId\": \"d3bd3d80-8913-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"erp-dubbo-provider*\",\n      \"kibanaId\": \"07c57150-ce26-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-base-gray*\",\n      \"kibanaId\": \"49ca8500-c48e-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-terminal-upgrade-api*\",\n      \"kibanaId\": \"9594a760-ba78-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-base-cache-device-ext-provider*\",\n      \"kibanaId\": \"4e980970-d854-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"zhuying-error-log*\",\n      \"kibanaId\": \"zhuying-error-log\"\n    },\n    {      \"esIndex\": \"ld-op-merchant-platform*\",\n      \"kibanaId\": \"2ebfe680-1c93-11ea-8920-cdda8e7f24f7\"\n    },\n    {      \"esIndex\": \"ld-base-sharding-transaction-record-provider*\",\n      \"kibanaId\": \"18c83cc0-31e1-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"ld-base-sharding-order-provider*\",\n      \"kibanaId\": \"ld-base-sharding-order-provider\"\n    },\n    {      \"esIndex\": \"ld-biz-user-operation*\",\n      \"kibanaId\": \"69af4992-1592-4b4e-837d-963d1d48e129\"\n    },\n    {      \"esIndex\": \"ld-ticket-vip-web*\",\n      \"kibanaId\": \"90aa23c0-d8f4-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-erp-ka*\",\n      \"kibanaId\": \"c3b87ce0-102a-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"ld-business-circle-ad*\",\n      \"kibanaId\": \"ld-business-circle-ad\"\n    },\n    {      \"esIndex\": \"ld-cs-2*\",\n      \"kibanaId\": \"3872cda0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-push-provider*\",\n      \"kibanaId\": \"3df589e0-c48f-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-business-editor-map*\",\n      \"kibanaId\": \"ld-business-editor-map\"\n    },\n    {      \"esIndex\": \"erp-workflow*\",\n      \"kibanaId\": \"70bf0730-ce25-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-base-weixin-order-recent-synchronizer*\",\n      \"kibanaId\": \"60aa59b0-1189-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"*crm-*\",\n      \"kibanaId\": \"78b5eb70-b46b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-ticket*\",\n      \"kibanaId\": \"a6ae8370-2569-11ea-b0d4-3dbf786dec8f\"\n    },\n    {      \"esIndex\": \"ld-devops-task-*\",\n      \"kibanaId\": \"1bab66f0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"xxl-job-admin*\",\n      \"kibanaId\": \"xxl-job-admin\"\n    },\n    {      \"esIndex\": \"ld-erp-cdtwarm*\",\n      \"kibanaId\": \"ld-erp-cdtwarm\"\n    },\n    {      \"esIndex\": \"terminal-ad-job-*\",\n      \"kibanaId\": \"a0f5a300-8090-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"ld-base-sharding-order-heterogeneous-data-sync*\",\n      \"kibanaId\": \"5ee333d0-b019-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-base-cache-device-ext-persistent*\",\n      \"kibanaId\": \"5d121860-3844-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"ld-business-editor-map-provider*\",\n      \"kibanaId\": \"ld-business-editor-map-provider\"\n    },\n    {      \"esIndex\": \"leishen-error-log*\",\n      \"kibanaId\": \"leishen-error-log\"\n    },\n    {      \"esIndex\": \"ld-mq-high-provider*\",\n      \"kibanaId\": \"ld-mq-high-provider\"\n    },\n    {      \"esIndex\": \"ld-order-api-*\",\n      \"kibanaId\": \"cf94a470-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-erp-devops*\",\n      \"kibanaId\": \"ld-erp-devops\"\n    },\n    {      \"esIndex\": \"ld-biz-user-provider-*\",\n      \"kibanaId\": \"40327f80-7a13-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"cnt-cdt-api*\",\n      \"kibanaId\": \"cnt-cdt-api\"\n    },\n    {      \"esIndex\": \"ld-merchant-coupon-job*\",\n      \"kibanaId\": \"c3fe0dd0-cdf1-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-base-task-*\",\n      \"kibanaId\": \"cbe5a490-ab8b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-shoppoint-store*\",\n      \"kibanaId\": \"90b7a770-aea6-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-biz-rent*\",\n      \"kibanaId\": \"db49eb80-ab8b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-cmb-payment-provider*\",\n      \"kibanaId\": \"c8098000-11b5-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"ld-base-device-ext*\",\n      \"kibanaId\": \"ld-base-device-ext\"\n    },\n    {      \"esIndex\": \"ld-base-cache-device-persistent*\",\n      \"kibanaId\": \"441b8fd0-3844-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"jvm-gc-collection*\",\n      \"kibanaId\": \"54f8d8d0-aac3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-enterprise-wechat-web*\",\n      \"kibanaId\": \"ba5fe640-bd93-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-base-user-provider*\",\n      \"kibanaId\": \"07ca7780-7a16-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"ld-statistics-server-wmd*\",\n      \"kibanaId\": \"7a3e9620-de76-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-business-circle-web*\",\n      \"kibanaId\": \"ld-business-circle-web\"\n    },\n    {      \"esIndex\": \"crm-api-*\",\n      \"kibanaId\": \"b68d0f70-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-weixin-order-synchronizer*\",\n      \"kibanaId\": \"1c31cca0-b987-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-devops-job*\",\n      \"kibanaId\": \"ld-devops-job\"\n    },\n    {      \"esIndex\": \"ld-api-auth*\",\n      \"kibanaId\": \"a15db600-ac5d-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-merchant-provider*\",\n      \"kibanaId\": \"d9f46cf0-aebc-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-bi-management*\",\n      \"kibanaId\": \"b32c1ba4-58ae-4b3e-8220-6fa7037baec1\"\n    },\n    {      \"esIndex\": \"port-admin*\",\n      \"kibanaId\": \"port-admin\"\n    },\n    {      \"esIndex\": \"ld-base-device*\",\n      \"kibanaId\": \"e6f35a1d-bbaa-4ebc-bd8f-4c251fc4beb6\"\n    },\n    {      \"esIndex\": \"erp-user*\",\n      \"kibanaId\": \"erp-user\"\n    },\n    {      \"esIndex\": \"ld-push-dubbo*\",\n      \"kibanaId\": \"ld-push-dubbo\"\n    },\n    {      \"esIndex\": \"base-device*\",\n      \"kibanaId\": \"base-device\"\n    },\n    {      \"esIndex\": \"ld-zookeeer*\",\n      \"kibanaId\": \"ld-zookeeer\"\n    },\n    {      \"esIndex\": \"ld-message-platform-*\",\n      \"kibanaId\": \"ecaaee70-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"apm-*\",\n      \"kibanaId\": \"apm-*\"\n    },\n    {      \"esIndex\": \"ld-ad-api*\",\n      \"kibanaId\": \"ld-ad-api\"\n    },\n    {      \"esIndex\": \"ld-base-wxauth-provider-*\",\n      \"kibanaId\": \"670ffdd0-7a13-11ea-b5bb-1fbac8943ddf\"\n    },\n    {      \"esIndex\": \"erp-ka*\",\n      \"kibanaId\": \"erp-ka\"\n    },\n    {      \"esIndex\": \"ld-base-zhima-order-recent-synchronizer*\",\n      \"kibanaId\": \"ee7378a0-118c-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"ld-devops-api-*\",\n      \"kibanaId\": \"253236e0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-base-rent-ext*\",\n      \"kibanaId\": \"ecf2a430-ab8b-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-erp-crm*\",\n      \"kibanaId\": \"ld-erp-crm\"\n    },\n    {      \"esIndex\": \"base-device-*\",\n      \"kibanaId\": \"d163a2a0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-enterprise-wechat-provider*\",\n      \"kibanaId\": \"d4937820-bd92-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"ld-xts-api-*\",\n      \"kibanaId\": \"9eab95d0-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"terminal-ad-api-*\",\n      \"kibanaId\": \"7e98fbc0-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-biz-device*\",\n      \"kibanaId\": \"ld-biz-device\"\n    },\n    {      \"esIndex\": \"ld-business-indoor-map-2*\",\n      \"kibanaId\": \"046f17a0-36a3-11ea-a211-0f61ab3bcfa9\"\n    },\n    {      \"esIndex\": \"cnt-cdt-api-2*\",\n      \"kibanaId\": \"c921d5d0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-erp-assist*\",\n      \"kibanaId\": \"9f865460-bfd9-11e9-8f37-7d94feb35a2f\"\n    },\n    {      \"esIndex\": \"ld-business-circle-ad-*\",\n      \"kibanaId\": \"71733db0-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-enterprise-web*\",\n      \"kibanaId\": \"31a59ac0-ae89-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"wb-test-log*\",\n      \"kibanaId\": \"98a19090-9050-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"terminal-ad-admin-api-*\",\n      \"kibanaId\": \"87d7c630-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"erp-mission-job*\",\n      \"kibanaId\": \"erp-mission-job\"\n    },\n    {      \"esIndex\": \"ld-business-circle-provider*\",\n      \"kibanaId\": \"ld-business-circle-provider\"\n    },\n    {      \"esIndex\": \"crm-job*\",\n      \"kibanaId\": \"c0cc6740-95b2-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-wxpay-provider*\",\n      \"kibanaId\": \"ld-base-wxpay-provider\"\n    },\n    {      \"esIndex\": \"ld-base-zhima-order-provider*\",\n      \"kibanaId\": \"37da7ce0-b987-11e9-b73d-f3db6edee820\"\n    },\n    {      \"esIndex\": \"cleaner-sync*\",\n      \"kibanaId\": \"cleaner-sync\"\n    },\n    {      \"esIndex\": \"terminal-cdt-api*\",\n      \"kibanaId\": \"be8b9a10-aac5-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-router-terminal*\",\n      \"kibanaId\": \"ld-router-terminal\"\n    },\n    {      \"esIndex\": \"ld-indoor-map-data-provider*\",\n      \"kibanaId\": \"ld-indoor-map-data-provider\"\n    },\n    {      \"esIndex\": \"ld-base-wxauth-provider*\",\n      \"kibanaId\": \"ld-base-wxauth-provider\"\n    },\n    {      \"esIndex\": \"ld-base-device-20*\",\n      \"kibanaId\": \"5a6c9670-3461-11eb-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-user-20*\",\n      \"kibanaId\": \"e7764a40-9103-11ea-8e34-23aecccf7569\"\n    },\n    {      \"esIndex\": \"ld-base-ops-confirm-provider*\",\n      \"kibanaId\": \"97429520-c4a2-11e9-9fc6-edda17168d94\"\n    },\n    {      \"esIndex\": \"ld-wxpay-order*\",\n      \"kibanaId\": \"65c8df70-ac5d-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-web-zhuying*\",\n      \"kibanaId\": \"3c6a7020-2602-11ea-b0d4-3dbf786dec8f\"\n    },\n    {      \"esIndex\": \"erp-gateway-*\",\n      \"kibanaId\": \"a6940290-aad3-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"ld-mp-promotion-web*\",\n      \"kibanaId\": \"bfac4b30-d84a-11e9-bbd8-a5feac4704f6\"\n    },\n    {      \"esIndex\": \"ld-zhuying-job-support-executor*\",\n      \"kibanaId\": \"ld-zhuying-job-support-executor\"\n    },\n    {      \"esIndex\": \"ld-third-member*\",\n      \"kibanaId\": \"ld-third-member\"\n    },\n    {      \"esIndex\": \"ld-biz-ticket*\",\n      \"kibanaId\": \"97961290-2569-11ea-b0d4-3dbf786dec8f\"\n    },\n    {      \"esIndex\": \"ld-third-member-*\",\n      \"kibanaId\": \"a54b4b60-aad2-11e9-9336-cd701a609711\"\n    },\n    {      \"esIndex\": \"cnt-cdt-api-backend*\",\n      \"kibanaId\": \"fa071200-125c-11ea-bc34-0515dce398fa\"\n    },\n    {      \"esIndex\": \"ld-business-indoor-map*\",\n      \"kibanaId\": \"ld-business-indoor-map\"\n    },\n    {      \"esIndex\": \"ld-base-task*\",\n      \"kibanaId\": \"ld-base-task\"\n    }  ]\n}\n</code></pre>\n",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/config/update",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37022,
+        "method": "POST",
+        "catid": 6093,
+        "title": "修改应用配置",
+        "path": "/app/monitor/config/update",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "raw",
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "markdown": "",
+        "desc": "",
+        "req_body_other": "{\n  \"id\":1,\n  \"appName\": \"crm异常监控\",\n  \"appOwner\": \"老吴\",\n  \"esIndex\": \"ld-erp-crm*\",\n  \"ddWebhookAccessToken\": \"d361cf7a46e47588395372602549149e243ac7fa8f1cc84e1e5eea3c339a7a47\",\n  \"esParam\": \"{\\\"query\\\":{\\\"bool\\\":{\\\"filter\\\":[{\\\"term\\\":{\\\"message\\\":\\\"error\\\"}},{\\\"range\\\":{\\\"index_utc_date\\\":{\\\"gte\\\":\\\"{startTime}\\\",\\\"lt\\\":\\\"{endTime}\\\"}}}],\\\"must_not\\\":[{\\\"term\\\":{\\\"log.file.path\\\":\\\"info.log\\\"}}]}}}\",\n  \"ddRobotMobile\": \"15338887312\",\n  \"alarmThreshold\": 1,\n  \"phoneAlarmThreshold\":10,\n  \"executeCycle\": 10,\n  \"deptId\":1,\n  \"testerName\":\"测试\",\n  \"testerPhone\":\"13888888888\"\n}",
+        "res_body": "{\n    \"msg\": \"成功\",\n    \"result\": 1,\n    \"data\": true\n}",
+        "req_body_type": "raw",
+        "uid": 434,
+        "add_time": 1608621624,
+        "up_time": 1611838459,
+        "__v": 0
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/data/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37024,
+        "method": "POST",
+        "catid": 6093,
+        "title": "应用监控数据列表",
+        "path": "/app/monitor/data/list",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "raw",
+        "uid": 434,
+        "add_time": 1608623380,
+        "up_time": 1610953751,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "60053417c46cf75ceea41220",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"configId\":{\"type\":\"integer\",\"description\":\"应用配置的id\"},\"startTime\":{\"type\":\"string\",\"description\":\"起始时间\"},\"endTime\":{\"type\":\"string\",\"description\":\"起止时间\"},\"pageNum\":{\"type\":\"integer\",\"mock\":{\"mock\":\"1\"},\"description\":\"第几页\"},\"pageSize\":{\"type\":\"string\",\"mock\":{\"mock\":\"10\"},\"description\":\"每页大小\"},\"appOwner\":{\"type\":\"string\",\"mock\":{\"mock\":\"冯立彬\"},\"description\":\"应用配置负责人\"},\"deptId\":{\"type\":\"number\",\"mock\":{\"mock\":\"1\"},\"description\":\"应用归属项目部ID\"}},\"required\":[\"pageNum\",\"pageSize\"]}",
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\n    \"msg\": \"成功\",\n    \"result\": 1,\n    \"data\": {\n        \"records\": [\n            {\n                \"id\": \"1640\",\n                \"appName\": \"ERP应用空指针异常监控\",\n                \"appOwner\": \"冯立彬\",\n                \"errCount\": 4,\n                \"kibanaUrl\": \"http://127.0.0.1:5601/app/kibana#/discover?_a=(columns:!(_source),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'44104a00-b46b-11ea-8e34-23aecccf7569',key:query,negate:!f,type:custom,value:'{\\\"bool\\\":{\\\"must_not\\\":[{\\\"term\\\":{\\\"fields.service.keyword\\\":{\\\"value\\\":\\\"ld-erp-devops\\\"}}}],\\\"must\\\":[{\\\"wildcard\\\":{\\\"message\\\":{\\\"value\\\":\\\"*nullpointerexception*\\\"}}}]}}'),query:(bool:(must_not:!((term:(fields.service.keyword:(value:ld-erp-devops)))),must:!((wildcard:(message:(value:'*nullpointerexception*')))))))),index:'44104a00-b46b-11ea-8e34-23aecccf7569',interval:auto,query:(language:kuery,query:''),sort:!('@timestamp',desc))&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'2021-01-14T15:21:00',to:'2021-01-14T15:31:00'))\",\n                \"remark\": null,\n                \"status\": 0,\n                \"closeTime\": null,\n                \"startTime\": \"2021-01-14 15:21:00\",\n                \"endTime\": \"2021-01-14 15:31:00\",\n\t\t\"deptId\":1,\n\t\t\"deptName\":\"雷神项目部\"\n            },\n            {\n                \"id\": \"1616\",\n                \"appName\": \"ERP表情符号异常监控\",\n                \"appOwner\": \"冯立彬\",\n                \"errCount\": 2,\n                \"kibanaUrl\": \"http://127.0.0.1:5601/app/kibana#/discover?_a=(columns:!(_source),filters:!(('$state':(store:appState),meta:(alias:!n,disabled:!f,index:'44104a00-b46b-11ea-8e34-23aecccf7569',key:query,negate:!f,type:custom,value:'{\\\"bool\\\":{\\\"must\\\":[{\\\"wildcard\\\":{\\\"message\\\":{\\\"value\\\":\\\"*incorrect*\\\"}}},{\\\"wildcard\\\":{\\\"message\\\":{\\\"value\\\":\\\"*string*\\\"}}}]}}'),query:(bool:(must:!((wildcard:(message:(value:'*incorrect*'))),(wildcard:(message:(value:'*string*')))))))),index:'44104a00-b46b-11ea-8e34-23aecccf7569',interval:auto,query:(language:kuery,query:''),sort:!('@timestamp',desc))&_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'2021-01-14T12:02:00',to:'2021-01-14T12:12:00'))\",\n                \"remark\": null,\n                \"status\": 0,\n                \"closeTime\": null,\n                \"startTime\": \"2021-01-14 12:02:00\",\n                \"endTime\": \"2021-01-14 12:12:00\",\n\t\t\"deptId\":1,\n\t\t\"deptName\":\"雷神项目部\"\n            }\n        ],\n        \"total\": 70,\n        \"size\": 25,\n        \"current\": 1,\n        \"searchCount\": true,\n        \"pages\": 3\n    }\n}",
+        "req_body_type": "json"
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/config/detail",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37026,
+        "method": "GET",
+        "catid": 6093,
+        "title": "应用监控详情",
+        "path": "/app/monitor/config/detail",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "raw",
+        "uid": 434,
+        "add_time": 1608688914,
+        "up_time": 1611838555,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "6012b45bc46cf75ceea418a7",
+            "name": "id",
+            "desc": "配置主键id"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\n  \"msg\": \"成功\",\n  \"result\": 1,\n  \"data\": {\n    \"id\": \"1\",\n    \"appName\": \"雷神网关应用erp-gateway异常监控\",\n    \"appOwner\": \"\",\n    \"esIndex\": \"erp-gateway-*\",\n    \"esParam\": \"{\\\"query\\\":{\\\"bool\\\":{\\\"filter\\\":[{\\\"term\\\":{\\\"message\\\":\\\"Internal Server Error\\\"}},{\\\"range\\\":{\\\"index_utc_date\\\":{\\\"gte\\\":\\\"{startTime}\\\",\\\"lt\\\":\\\"{endTime}\\\"}}}],\\\"must_not\\\":[{\\\"term\\\":{\\\"log.file.path\\\":\\\"info.log\\\"}}]}}}\",\n    \"ddWebhookAccessToken\": \"d361cf7a46e47588395372602549149e243ac7fa8f1cc84e1e5eea3c339a7a47\",\n    \"ddRobotMobile\": \"15338887312\",\n    \"alarmThreshold\": 1,\n    \"phoneAlarmThreshold\":10,\n    \"lastScanTime\": \"2020-12-23 10:10:00\",\n    \"executeCycle\": 10,\n    \"deptId\":1,\n    \"deptName\":\"雷神项目部\",\n    \"testerName\":\"测试\",\n    \"testerPhone\":\"13888888888\"\n  }\n}"
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/config/configOwner",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37430,
+        "method": "POST",
+        "catid": 6093,
+        "title": "应用监控负责人列表",
+        "path": "/app/monitor/config/configOwner",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "raw",
+        "uid": 403,
+        "add_time": 1610612174,
+        "up_time": 1610787021,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6002a8cdc46cf75ceea4120d",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "0",
+            "_id": "6002a8cdc46cf75ceea4120e",
+            "name": "deptId",
+            "type": "text",
+            "example": "1",
+            "desc": "应用归属项目部的ID"
+          }
+        ],
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\n\t\"msg\": \"成功\",\n\t\"result\": 1,\n\t\"data\": [{\n\t\t\"appOwner\": \"钦争艳\"\n\t}, {\n\t\t\"appOwner\": \"熊哲\"\n\t}, {\n\t\t\"appOwner\": \"胡云\"\n\t}, {\n\t\t\"appOwner\": \"江超\"\n\t}, {\n\t\t\"appOwner\": \"王国伟\"\n\t}, {\n\t\t\"appOwner\": \"姚宇明\"\n\t}, {\n\t\t\"appOwner\": \"郑韬\"\n\t}, {\n\t\t\"appOwner\": \"李坤保\"\n\t}, {\n\t\t\"appOwner\": \"罗玉华\"\n\t}, {\n\t\t\"appOwner\": \"黄兵\"\n\t}, {\n\t\t\"appOwner\": \"冯立彬\"\n\t}]\n}",
+        "req_body_type": "form"
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/config/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37020,
+        "method": "POST",
+        "catid": 6093,
+        "title": "应用监控配置列表",
+        "path": "/app/monitor/config/list",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 434,
+        "add_time": 1608618940,
+        "up_time": 1611838536,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "6012b448c46cf75ceea418a6",
+            "name": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "req_body_other": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{\"configId\":{\"type\":\"integer\",\"description\":\"监控项目ID\"},\"alarmMobile\":{\"type\":\"string\",\"description\":\"告警手机号码\"},\"esIndex\":{\"type\":\"string\",\"description\":\"ES索引\"},\"pageNum\":{\"type\":\"integer\",\"mock\":{\"mock\":\"1\"},\"description\":\"第几页\"},\"pageSize\":{\"type\":\"integer\",\"mock\":{\"mock\":\"10\"},\"description\":\"每页大小\"},\"appOwner\":{\"type\":\"string\",\"description\":\"应用负责人的名称\",\"mock\":{\"mock\":\"冯立彬\"}},\"deptId\":{\"type\":\"integer\",\"mock\":{\"mock\":\"1\"},\"description\":\"应用归属项目部的ＩＤ\"}},\"required\":[\"pageNum\",\"pageSize\"]}",
+        "markdown": "```\n{\n  \"msg\": \"成功\",\n  \"result\": 1,\n  \"data\": {    \"records\": [\n      {\n        \"id\": \"1\",\n        \"appName\": \"雷神网关应用erp-gateway异常监控\",\n        \"appOwner\": \"\",\n        \"esIndex\": \"erp-gateway-*\",\n        \"ddRobotMobile\": \"15338887312\",\n        \"createTime\": \"2020-12-16 13:58:03\",\n        \"createUserName\": null,\n        \"updateTime\": \"2020-12-18 18:04:16\",\n        \"updateUserName\": null,\n        \"alarmThreshold\":1,\n        \"phoneAlarmThreshold\":10,\n        \"executeCycle\": 10,\n        \"deptId\":1,\n        \"deptName\":\"雷神项目部\",\n        \"testerName\":\"测试\",\n        \"testerPhone\":\"13888888888\"\n      }    ],\n    \"total\": 1,\n    \"size\": 10,\n    \"current\": 1,\n    \"searchCount\": true,\n    \"pages\": 1\n  }}\n```",
+        "desc": "<pre><code>{\n  \"msg\": \"成功\",\n  \"result\": 1,\n  \"data\": {    \"records\": [\n      {\n        \"id\": \"1\",\n        \"appName\": \"雷神网关应用erp-gateway异常监控\",\n        \"appOwner\": \"\",\n        \"esIndex\": \"erp-gateway-*\",\n        \"ddRobotMobile\": \"15338887312\",\n        \"createTime\": \"2020-12-16 13:58:03\",\n        \"createUserName\": null,\n        \"updateTime\": \"2020-12-18 18:04:16\",\n        \"updateUserName\": null,\n        \"alarmThreshold\":1,\n        \"phoneAlarmThreshold\":10,\n        \"executeCycle\": 10,\n        \"deptId\":1,\n        \"deptName\":\"雷神项目部\",\n        \"testerName\":\"测试\",\n        \"testerPhone\":\"13888888888\"\n      }    ],\n    \"total\": 1,\n    \"size\": 10,\n    \"current\": 1,\n    \"searchCount\": true,\n    \"pages\": 1\n  }}\n</code></pre>\n",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "json"
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/config/delete",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37023,
+        "method": "POST",
+        "catid": 6093,
+        "title": "删除应用配置",
+        "path": "/app/monitor/config/delete",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "raw",
+        "uid": 434,
+        "add_time": 1608621720,
+        "up_time": 1608621945,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "5fe19f79c46cf75ceea3fa50",
+            "name": "id",
+            "desc": "待删除的配置id"
+          }
+        ],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "5fe19f79c46cf75ceea3fa51",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [
+          {
+            "required": "1",
+            "_id": "5fe19f79c46cf75ceea3fa52",
+            "name": "id",
+            "type": "text",
+            "desc": "待删除的配置id"
+          }
+        ],
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}",
+        "req_body_type": "form"
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/config/save",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37021,
+        "method": "POST",
+        "catid": 6093,
+        "title": "新增应用配置",
+        "path": "/app/monitor/config/save",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "raw",
+        "uid": 434,
+        "add_time": 1608620386,
+        "up_time": 1611838475,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "req_body_other": "{\n  \"appName\":\"crm异常监控\",\n  \"appOwner\":\"老吴\",\n  \"esIndex\":\"ld-erp-crm*\",\n  \"ddWebhookAccessToken\":\"d361cf7a46e47588395372602549149e243ac7fa8f1cc84e1e5eea3c339a7a47\",\n  \"esParam\":\"{\\\"query\\\":{\\\"bool\\\":{\\\"filter\\\":[{\\\"term\\\":{\\\"message\\\":\\\"error\\\"}},{\\\"range\\\":{\\\"index_utc_date\\\":{\\\"gte\\\":\\\"{startTime}\\\",\\\"lt\\\":\\\"{endTime}\\\"}}}],\\\"must_not\\\":[{\\\"term\\\":{\\\"log.file.path\\\":\\\"info.log\\\"}}]}}}\",\n  \"ddRobotMobile\":\"15338887312\",\n  \"alarmThreshold\":1,\n  \"phoneAlarmThreshold\":10,\n  \"executeCycle\": 10,\n  \"deptId\":1,\n  \"testerName\":\"测试\",\n  \"testerPhone\":\"13888888888\"\n}",
+        "res_body": "{\n    \"msg\": \"成功\",\n    \"result\": 1,\n    \"data\": true\n}",
+        "req_body_type": "raw"
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/data/updateRemark",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37392,
+        "method": "POST",
+        "catid": 6093,
+        "title": "更新告警任务备注",
+        "path": "/app/monitor/data/updateRemark",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "raw",
+        "uid": 403,
+        "add_time": 1610091451,
+        "up_time": 1610091481,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "req_body_other": "{\n    \"id\": \"350\",\n    \"remark\": \"这是一个备注\"\n}",
+        "res_body": "{\n    \"msg\": \"成功\",\n    \"result\": 1,\n    \"data\": true\n}",
+        "req_body_type": "raw"
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/data/updateStatus",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37378,
+        "method": "POST",
+        "catid": 6093,
+        "title": "更新告警任务的状态",
+        "path": "/app/monitor/data/updateStatus",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "raw",
+        "uid": 403,
+        "add_time": 1609916290,
+        "up_time": 1609916364,
+        "req_query": [],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "req_body_other": "{\n    \"id\": \"260\",\n    \"status\": \"1\",\n    \"access_token\": \"5axdlkh1i3nr4xydtfzrjuhx61s5eo6\"\n}",
+        "res_body": "{\n    \"msg\": \"成功\",\n    \"result\": 1,\n    \"data\": true\n}",
+        "req_body_type": "raw"
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/data/detail",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37391,
+        "method": "GET",
+        "catid": 6093,
+        "title": "获取告警任务详情",
+        "path": "/app/monitor/data/detail",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "json",
+        "uid": 403,
+        "add_time": 1610091349,
+        "up_time": 1610091409,
+        "req_query": [
+          {
+            "required": "1",
+            "_id": "5ff80b91c46cf75ceea40ce2",
+            "name": "id",
+            "example": "1",
+            "desc": "告警任务的ID"
+          }
+        ],
+        "req_headers": [],
+        "req_body_form": [],
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\"type\":\"object\",\"title\":\"empty object\",\"properties\":{}}"
+      },
+      {
+        "query_path": {
+          "path": "/app/monitor/dept/list",
+          "params": []
+        },
+        "edit_uid": 0,
+        "status": "undone",
+        "type": "static",
+        "req_body_is_json_schema": true,
+        "res_body_is_json_schema": true,
+        "api_opened": false,
+        "index": 0,
+        "tag": [],
+        "_id": 37441,
+        "method": "POST",
+        "catid": 6093,
+        "title": "获取应用归属的项目部",
+        "path": "/app/monitor/dept/list",
+        "project_id": 695,
+        "req_params": [],
+        "res_body_type": "raw",
+        "uid": 403,
+        "add_time": 1610787244,
+        "up_time": 1610953043,
+        "req_query": [],
+        "req_headers": [
+          {
+            "required": "1",
+            "_id": "60053153c46cf75ceea4121e",
+            "name": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "req_body_form": [],
+        "__v": 0,
+        "markdown": "",
+        "desc": "",
+        "res_body": "{\n    \"msg\": \"成功\",\n    \"result\": 1,\n    \"data\": [\n        {\n            \"id\": \"1\",\n            \"deptName\": \"雷神项目部\"\n        },\n        {\n            \"id\": \"2\",\n            \"deptName\": \"客户项目部\"\n        },\n        {\n            \"id\": \"3\",\n            \"deptName\": \"财资项目部\"\n        }\n    ]\n}",
+        "req_body_type": "form"
+      }
+    ]
+  }
+]

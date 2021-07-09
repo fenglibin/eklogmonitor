@@ -1,0 +1,15 @@
+package com.eeeffff.monitor.eklogmonitor;
+
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
+
+/**
+ *
+ * @author fenglibin
+ *
+ */
+@RunWith(SpringRunner.class)
+@SpringBootTest
+public abstract class AbstractSpringBootTest {
+}
