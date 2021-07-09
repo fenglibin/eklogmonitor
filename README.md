@@ -72,7 +72,13 @@ create database eklogmonitor default character set utf8;
 mysql -uroot -proot eklogmonitor < eklogmonitor.sql
 ```
 
-## ３、application.yml配置
+## ３、创建钉钉告警机器人
+
+创建钉钉机器人并获取其TOKEN，替换导入app_monitor_config表中的ddWebhookAccessToken的值为你申请的刹钉机器人的TOKEN，产生的告警就会转到对应的钉钉告警群中。
+
+注：接收告警的人，一定要拉到告警群中，否则无法接收告警，告警人接收告警的号码设置到app_monitor_config表中的字段ddRobotMobile中。
+
+## ４、application.yml配置
 
 ELogMonitor需要使用到Redis及MySQL，需要在配置文件src/main/resources/application.yml中做好相应的配置，配置大致如下：
 
@@ -125,11 +131,11 @@ app:
 ​      1 : 13255555555,13266666666,13277777777
 ```
 
-## ４、编译工程
+## ５、编译工程
 
 转到项目的根目录，执行install.sh。
 
-## ５、运行工程
+## ６、运行工程
 
 在项目的根目录，执行命令start.sh。
 
